@@ -1,10 +1,26 @@
 Quiz 3 will require you to complete the following:
 
-- Create a prefab.
-- Create a Canvas.
-- Add a UI Button which instantiates the prefab.
-- Add a UI Button which changes the scene.
-- Add a UI Text which counts the number of instantiated prefabs in the scene.
+- Create a ball prefab.
+- Configure the "Ball Button" to instantiate a ball when clicked.
+- Add a UI Button which changes the scene. (Scene 1 should go to Scene 2, Scene 2 to Scene 1)
+- Have the "Ball Counter" Text update to show how many balls are in the scene.
 
 Much of the scene has been created for you so you can focus soley on completing the tasks listed above.
 Use the code below to help.
+
+//==============================================================
+public GameObject BallPrefab;
+public Text BallCountText;
+public int BallCount;
+
+public void Button_CreateBall()
+{
+	Instantiate(BallPrefab, new Vector3(Random.Range(-5f, 5f), 5f, 0f), Quaternion.identity);
+	BallCount++;
+	BallCountText.text = BallCount.ToString();
+}
+
+public void Button_ChangeLevel(int level)
+{
+	SceneManager.LoadScene(level);
+}
