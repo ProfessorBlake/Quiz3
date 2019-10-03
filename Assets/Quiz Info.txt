@@ -1,0 +1,10 @@
+Quiz 3 will require you to complete the following:
+
+- Create a prefab.
+- Create a Canvas.
+- Add a UI Button which instantiates the prefab.
+- Add a UI Button which changes the scene.
+- Add a UI Text which counts the number of instantiated prefabs in the scene.
+
+Much of the scene has been created for you so you can focus soley on completing the tasks listed above.
+Use the code below to help.
